@@ -27,9 +27,12 @@
                                     <form action="{{ url('store-form-I') }}" method="post">
                                         @csrf
                                         <input name="id_mahasiswa" value="{{ $mahasiswa->id }}" type="hidden">
+                                        
 
                                         @foreach ($list_soal->whereIn('id_bagian', '96ae217a-7d04-4bdc-84f4-8c91a51adde5') as $soal)
                                             <div class="form-group">
+                                                <input name="id_soal" value="{{ $soal->id }}" class="form-control" type="hidden">
+                                                <input name="id_bagian" value="{{ $soal->bagian->id }}" class="form-control" type="hidden">
 
                                                 <div class="col-lg-12 news_posts news_post_top d-flex flex-column ">
                                                     <div class="news_posts"> <br>
@@ -55,7 +58,7 @@
                                                                             <input type="radio"
                                                                                 name="jawaban[{{ $soal->id }}]"
                                                                                 value="{{ $jawaban->id }}"
-                                                                                class="form-check-input">
+                                                                                class="form-check-input" required>
                                                                             <label>{{ $jawaban->jawaban }}</label>
                                                                         </div>
                                                                     </div>
@@ -69,7 +72,7 @@
                                             </div>
                                         @endforeach
                                         <div class="form-group">
-                                            <button class="btn btn-primary text-white btn-center" onclick="return confirm('Apakah Anda Yakin Ingin Menyimpan Data Ini?')">
+                                            <button class="btn btn-primary text-white btn-center" onclick="return confirm('Apakah Anda Yakin Ingin Menyimpan Data Ini? Pengisian Hanya Bisa di Lakukan Sekali')">
                                                 <i class="fa fa-save"></i>
                                                 Simpan
                                             </button>

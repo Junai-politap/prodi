@@ -13,14 +13,14 @@ class Soal extends Model
 	protected $table = "soal";
 
 	function Bagian(){
-		return $this->belongsTo('\App\Models\Bagian', 'id_bagian');
+		return $this->belongsTo(Bagian::class, 'id_bagian');
 	}
 
     function Jawaban(){
-		return $this->belongsTo('\App\Models\Jawaban', 'id');
+		return $this->belongsTo(Jawaban::class, 'id');
 	}
 
-	function Form_I(){
-		return $this->belongsTo('\App\Models\Tracer\Form_I', 'id');
+	function TracerStudy(){
+		return $this->belongsTo(TracerStudy::class, 'id');
 	}
 }

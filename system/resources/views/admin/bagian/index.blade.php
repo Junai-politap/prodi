@@ -26,10 +26,10 @@
                             <td class="text-center">
                                 <div class="btn-group">
 
-                                    <a href="{{ url('hasil-survey') }}" class="btn btn-success"><span class="fa fa-industry"></span> Hasil Survey</a>
+                                    <a href="{{ url("hasil-survey/$bagian->id") }}" class="btn btn-success"><span class="fa fa-industry"></span> Hasil Survey</a>
 
 
-                                    <a href="{{ url("detail-form/$bagian->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("detail/$bagian->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
                                     <button class="btn btn-warning" data-toggle="modal"

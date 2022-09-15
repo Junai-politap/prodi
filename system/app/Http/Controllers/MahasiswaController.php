@@ -8,11 +8,7 @@ use App\Models\Mahasiswa;
 use App\Models\Bagian;
 use App\Models\Soal;
 use App\Models\Jawaban;
-use App\Models\Tracer\Form_1;
-use App\Models\Tracer\Form_2;
-use App\Models\Tracer\Form_3;
-use App\Models\Tracer\Form_4;
-use App\Models\Tracer\Form_5;
+use App\Models\TracerStudy;
 use Auth;
 
 class MahasiswaController extends Controller
@@ -72,7 +68,7 @@ class MahasiswaController extends Controller
         $data['list_soal'] = Soal::all();
         $data['list_jawaban'] = Jawaban::all();
 
-        $data['list_form_2'] = Form_2::all();
+        
 
 
         return view('mahasiswa.tracer-study-form-ii', $data);
@@ -120,11 +116,13 @@ class MahasiswaController extends Controller
     {
         foreach (request('jawaban') as $id_jawaban => $value) {
 
-        $form_1 = New Form_1;
-        $form_1->id_mahasiswa = request('id_mahasiswa'); 
-        $form_1->id_jawaban = $id_jawaban;
-        $form_1->level = 1;
-        $form_1->save();
+        $tracerstudy = New TracerStudy;
+        $tracerstudy->id_mahasiswa = request('id_mahasiswa'); 
+        $tracerstudy->id_bagian = request('id_bagian');
+        $tracerstudy->id_soal = request('id_soal');
+        $tracerstudy->id_jawaban = $id_jawaban;
+        
+        $tracerstudy->save();
 
         $id_mahasiswa = request('id_mahasiswa');
 		$mahasiswa = Mahasiswa::where('id', $id_mahasiswa)->get();
@@ -142,18 +140,24 @@ class MahasiswaController extends Controller
     public function tracerForm_II(Request $request)
     {
         
-        $form_1 = New Form_2;
-        $form_1->id_mahasiswa = request('id_mahasiswa'); 
-        $form_1->id_jawaban = request('id_jawaban');
-        $form_1->level = 1;
-        $form_1->save();
+        foreach (request('jawaban') as $id_jawaban => $value) {
 
-        $id_mahasiswa = request('id_mahasiswa');
-		$mahasiswa = Mahasiswa::where('id', $id_mahasiswa)->get();
-		foreach ($mahasiswa  as $tr) {
-			$tr->status_tracing_2 = 1;
-			$tr->update();
-		}
+            $tracerstudy = New TracerStudy;
+            $tracerstudy->id_mahasiswa = request('id_mahasiswa'); 
+            $tracerstudy->id_bagian = request('id_bagian');
+            $tracerstudy->id_soal = request('id_soal');
+            $tracerstudy->id_jawaban = $id_jawaban;
+            
+            $tracerstudy->save();
+    
+            $id_mahasiswa = request('id_mahasiswa');
+            $mahasiswa = Mahasiswa::where('id', $id_mahasiswa)->get();
+            foreach ($mahasiswa  as $tr) {
+                $tr->status_tracing_2 = 1;
+                $tr->update();
+            }
+    
+            }
 
         return back()->with('success', 'Terima Kasih Anda Sudah Mengisi Formulir');
     }
@@ -162,11 +166,13 @@ class MahasiswaController extends Controller
     {
         foreach (request('jawaban') as $id_jawaban => $value) {
 
-        $form_1 = New Form_3;
-        $form_1->id_mahasiswa = request('id_mahasiswa'); 
-        $form_1->id_jawaban = $id_jawaban;
-        $form_1->level = 1;
-        $form_1->save();
+            $tracerstudy = New TracerStudy;
+            $tracerstudy->id_mahasiswa = request('id_mahasiswa'); 
+            $tracerstudy->id_bagian = request('id_bagian');
+            $tracerstudy->id_soal = request('id_soal');
+            $tracerstudy->id_jawaban = $id_jawaban;
+            
+            $tracerstudy->save();
 
         $id_mahasiswa = request('id_mahasiswa');
 		$mahasiswa = Mahasiswa::where('id', $id_mahasiswa)->get();
@@ -185,11 +191,13 @@ class MahasiswaController extends Controller
     {
         foreach (request('jawaban') as $id_jawaban => $value) {
 
-        $form_1 = New Form_4;
-        $form_1->id_mahasiswa = request('id_mahasiswa'); 
-        $form_1->id_jawaban = $id_jawaban;
-        $form_1->level = 1;
-        $form_1->save();
+            $tracerstudy = New TracerStudy;
+            $tracerstudy->id_mahasiswa = request('id_mahasiswa'); 
+            $tracerstudy->id_bagian = request('id_bagian');
+            $tracerstudy->id_soal = request('id_soal');
+            $tracerstudy->id_jawaban = $id_jawaban;
+            
+            $tracerstudy->save();
 
         $id_mahasiswa = request('id_mahasiswa');
 		$mahasiswa = Mahasiswa::where('id', $id_mahasiswa)->get();
@@ -208,11 +216,13 @@ class MahasiswaController extends Controller
     {
         foreach (request('jawaban') as $id_jawaban => $value) {
 
-        $form_1 = New Form_5;
-        $form_1->id_mahasiswa = request('id_mahasiswa'); 
-        $form_1->id_jawaban = $id_jawaban;
-        $form_1->level = 1;
-        $form_1->save();
+         $tracerstudy = New TracerStudy;
+            $tracerstudy->id_mahasiswa = request('id_mahasiswa'); 
+            $tracerstudy->id_bagian = request('id_bagian');
+            $tracerstudy->id_soal = request('id_soal');
+            $tracerstudy->id_jawaban = $id_jawaban;
+            
+            $tracerstudy->save();
 
         $id_mahasiswa = request('id_mahasiswa');
 		$mahasiswa = Mahasiswa::where('id', $id_mahasiswa)->get();

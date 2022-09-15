@@ -135,10 +135,10 @@ Route::group( [ 'middleware' => 'auth' ], function(){
 
     Route::get('page-form', [BagianController::class, 'index']);
     Route::post('store-form', [BagianController::class, 'store']);
-    Route::get('/detail-form/{id}', [BagianController::class, 'detail']);
+    Route::get('/detail/{id}', [BagianController::class, 'detail']);
     Route::put('/update-form/{id}', [BagianController::class, 'update']);
     Route::get('/delete-form/{id}', [BagianController::class, 'destroy']);
-    Route::get('hasil-survey', [BagianController::class, 'hasil']);
+    Route::get('hasil-survey/{id}', [BagianController::class, 'hasil']);
 
 
     Route::get('page-soal', [SoalController::class, 'index']);

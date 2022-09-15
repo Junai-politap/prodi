@@ -6,33 +6,42 @@
     <div class="card">
         <div class="card-header">
             <h1 class="text-center">
-                <strong>Data Hasil Survey </strong>
+                <strong>Data Hasil Survey {{ $bagian->nama }} {{ $bagian->title }} </strong>
             </h1>
 
         </div>
 
         <div class="card-body">
-           
-            <div class="row">
-                @foreach ($list_mahasiswa->groupBy('tahun_masuk') as $mahasiswa => $val)
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3>
-                                    Tahun Angkatan {{ $mahasiswa }}
-                                </h3>
-                               
-                                {{-- <p>Jumlah {{ $mahasiswa->sum() }}</p> --}}
-                            </div><br>
-                            <div class="icon">
-                                <i class="ion ion-bag"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail 
-                                <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Soal</th>
+                        <th class="text-center">Sangat Besar</th>
+                        <th class="text-center">Besar</th>
+                        <th class="text-center">Cukup Besar</th>
+                        <th class="text-center">Kurang</th>
+                        <th class="text-center">Tidak Sama Sekali</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($list_soal as $soal)
+                        <tr>
+                            @if ($soal->id_bagian == $bagian->id)
+                                <td>{{ $soal->soal }}</td>
+                                @foreach ($list_form_1 as $form_1)
+                                   <td>
+                                    {{ $data_form_1->filter(function ($q) use ($soal) {
+                                        return $soal->id == $q->id_jawaban;
+                                    })->count('id_jawaban') }}
+                                    </td> 
+                                @endforeach
+                            @endif
+                        </tr>
+                    @endforeach
+
+
+
+                </tbody>
+            </table>
         </div>
     @endsection

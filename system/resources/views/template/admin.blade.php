@@ -25,8 +25,7 @@ function checkRouteActive($route)
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ url('public/admin') }}/dist/css/adminlte.min.css">
 
-    <link rel="stylesheet"
-        href="{{ url('public/admin') }}//plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" href="{{ url('public/admin') }}//plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -107,7 +106,11 @@ function checkRouteActive($route)
     <script src="{{ url('public/admin') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="{{ url('public/admin') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
+    <script src="{{ url('public/admin') }}/plugins/chart.js/Chart.min.js"></script>
+    <!-- page script -->
+   
     @stack('script')
+    
     <script>
         $(function() {
             $('.summernote').summernote({
