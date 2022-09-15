@@ -15,6 +15,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
+                        <th class="text-center"> No</th>
                         <th class="text-center">Soal</th>
                         <th class="text-center">Sangat Besar</th>
                         <th class="text-center">Besar</th>
@@ -23,18 +24,15 @@
                         <th class="text-center">Tidak Sama Sekali</th>
                     </tr>
                 </thead>
+                @php
+                    $no=1;
+                @endphp
                 <tbody>
                     @foreach ($list_soal as $soal)
                         <tr>
                             @if ($soal->id_bagian == $bagian->id)
+                                <td>{{ $no++; }}</td>
                                 <td>{{ $soal->soal }}</td>
-                                @foreach ($list_form_1 as $form_1)
-                                   <td>
-                                    {{ $data_form_1->filter(function ($q) use ($soal) {
-                                        return $soal->id == $q->id_jawaban;
-                                    })->count('id_jawaban') }}
-                                    </td> 
-                                @endforeach
                             @endif
                         </tr>
                     @endforeach

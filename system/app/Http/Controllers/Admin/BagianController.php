@@ -7,7 +7,7 @@ use App\Models\Bagian;
 use App\Models\Soal;
 use App\Models\Jawaban;
 use App\Models\Mahasiswa;
-use App\Models\Tracer\Form_1;
+use App\Models\TracerStudy;
 
 class BagianController extends Controller
 {
@@ -57,13 +57,7 @@ class BagianController extends Controller
         $data['list_soal'] =Soal::all();
         $data['list_jawaban'] = Jawaban::all();
         $data['bagian'] = Bagian::find($id);
-        $data['list_form_1'] = Form_1::all();
-
-        $data['list_mahasiswa'] = Mahasiswa::all();
-
-
-        $data['data_form_1'] = Form_1::all();
-        $data['list_form_1'] = Form_1::orderBy('id', 'ASC')->take(1)->get();
+        
 
         return view('admin.bagian.hasil', $data);
     }
