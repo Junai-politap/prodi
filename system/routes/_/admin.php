@@ -34,45 +34,38 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', [AdminController::class, 'index']);
 
-    Route::get('page-mahasiswa', [MasterMahasiswaController::class, 'index']);
-    Route::post('store-mahasiswa', [MasterMahasiswaController::class, 'store']);
-    Route::get('/show-mahasiswa/{id}', [MasterMahasiswaController::class, 'show']);
-    Route::get('/edit-mahasiswa/{id}', [MasterMahasiswaController::class, 'edit']);
-    Route::put('/update-mahasiswa/{id}', [MasterMahasiswaController::class, 'update']);
-    Route::get('/delete-mahasiswa/{id}', [MasterMahasiswaController::class, 'destroy']);
-
-    Route::get('page-pegawai', [PegawaiController::class, 'index']);
+    Route::get('pegawai', [PegawaiController::class, 'index']);
     Route::post('store-pegawai', [PegawaiController::class, 'store']);
     Route::get('/show-pegawai/{id}', [PegawaiController::class, 'show']);
     Route::get('/edit-pegawai/{id}', [PegawaiController::class, 'edit']);
     Route::put('/update-pegawai/{id}', [PegawaiController::class, 'update']);
     Route::get('/delete-pegawai/{id}', [PegawaiController::class, 'destroy']);
 
-    Route::get('page-pimpinan', [PimpinanController::class, 'index']);
+    Route::get('pimpinan', [PimpinanController::class, 'index']);
     Route::post('store-pimpinan', [PimpinanController::class, 'store']);
     Route::get('/show-pimpinan/{id}', [PimpinanController::class, 'show']);
     Route::get('/edit-pimpinan/{id}', [PimpinanController::class, 'edit']);
     Route::put('/update-pimpinan/{id}', [PimpinanController::class, 'update']);
     Route::get('/delete-pimpinan/{id}', [PimpinanController::class, 'destroy']);
 
-    Route::get('page-visi-misi', [VisiMisiController::class, 'index']);
+    Route::get('visi-misi', [VisiMisiController::class, 'index']);
     Route::post('store-visi-misi', [VisiMisiController::class, 'store']);
     Route::put('/update-visi-misi/{id}', [VisiMisiController::class, 'update']);
     Route::get('/delete-visi-misi/{id}', [VisiMisiController::class, 'destroy']);
 
-    Route::get('page-lulusan', [LulusanController::class, 'index']);
+    Route::get('lulusan', [LulusanController::class, 'index']);
     Route::post('store-lulusan', [LulusanController::class, 'store']);
     Route::put('/update-lulusan/{id}', [LulusanController::class, 'update']);
     Route::get('/delete-lulusan/{id}', [LulusanController::class, 'destroy']);
 
-    Route::get('page-kurikulum', [KurikulimController::class, 'index']);
+    Route::get('kurikulum', [KurikulimController::class, 'index']);
     Route::post('store-mata-kuliah', [KurikulimController::class, 'store']);
     Route::get('edit-mata-kuliah/{id}', [KurikulimController::class, 'edit']);
     Route::put('/update-mata-kuliah/{id}', [KurikulimController::class, 'update']);
     Route::get('/delete-mata-kuliah/{id}', [KurikulimController::class, 'destroy']);
 
 
-    Route::get('page-pelayanan', [PelayananController::class, 'index']);
+    Route::get('pelayanan', [PelayananController::class, 'index']);
     Route::post('storejenis', [PelayananController::class, 'storejenis']);
     Route::post('storepelayanan', [PelayananController::class, 'storepelayanan']);
     Route::get('/show/{id}', [PelayananController::class, 'show']);
@@ -80,7 +73,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/update-pelayanan/{id}', [PelayananController::class, 'update']);
     Route::get('/delete/{id}', [PelayananController::class, 'destroy']);
 
-    Route::get('page-berita', [BeritaController::class, 'index']);
+    Route::get('berita', [BeritaController::class, 'index']);
     Route::post('store-berita', [BeritaController::class, 'store']);
     Route::get('/show-berita/{id}', [BeritaController::class, 'show']);
     Route::get('/edit-berita/{id}', [BeritaController::class, 'edit']);
@@ -90,7 +83,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete-berita/{id}', [BeritaController::class, 'destroy']);
 
 
-    Route::get('page-slide', [SlideController::class, 'index']);
+    Route::get('slide', [SlideController::class, 'index']);
     Route::post('store-slide', [SlideController::class, 'store']);
     Route::get('/show-slide/{id}', [SlideController::class, 'show']);
     Route::get('/edit-slide/{id}', [SlideController::class, 'edit']);
@@ -98,14 +91,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete-slide/{id}', [SlideController::class, 'destroy']);
 
 
-    Route::get('page-akreditasi', [AkreditasiController::class, 'index']);
+    Route::get('akreditasi', [AkreditasiController::class, 'index']);
     Route::post('store-akreditasi', [AkreditasiController::class, 'store']);
     Route::get('/show-akreditasi/{id}', [AkreditasiController::class, 'show']);
     Route::get('/edit-akreditasi/{id}', [AkreditasiController::class, 'edit']);
     Route::put('/update-akreditasi/{id}', [AkreditasiController::class, 'update']);
     Route::get('/delete-akreditasi/{id}', [AkreditasiController::class, 'destroy']);
 
-    Route::get('page-mahasiswa', [MasterMahasiswaController::class, 'index']);
+    Route::get('mahasiswa', [MasterMahasiswaController::class, 'index']);
     Route::get('create', [MasterMahasiswaController::class, 'create']);
     Route::post('store-mahasiswa', [MasterMahasiswaController::class, 'store']);
     Route::get('/show-mahasiswa/{id}', [MasterMahasiswaController::class, 'show']);
@@ -113,15 +106,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/update-mahasiswa/{id}', [MasterMahasiswaController::class, 'update']);
     Route::get('/delete-mahasiswa/{id}', [MasterMahasiswaController::class, 'destroy']);
 
-    Route::get('page-prodi', [ProdiController::class, 'index']);
+    Route::get('prodi', [ProdiController::class, 'index']);
     Route::post('store-prodi', [ProdiController::class, 'store']);
     Route::get('/edit-prodi/{id}', [ProdiController::class, 'edit']);
     Route::put('/update-prodi/{id}', [ProdiController::class, 'update']);
     Route::get('/delete-prodi/{id}', [ProdiController::class, 'destroy']);
 
-    Route::get('page-tracer', [TracerStudiController::class, 'index']);
+    Route::get('tracer', [TracerStudiController::class, 'index']);
 
-    Route::get('page-fasilitas', [FasilitasController::class, 'index']);
+    Route::get('fasilitas', [FasilitasController::class, 'index']);
     Route::post('store-fasilitas', [FasilitasController::class, 'store']);
     Route::get('show-fasilitas/{fasilitas}', [FasilitasController::class, 'show']);
     Route::get('/edit-fasilitas/{id}', [FasilitasController::class, 'edit']);
@@ -136,7 +129,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('store-galery', [FasilitasGaleryController::class, 'store']);
     Route::post('store-video', [FasilitasGaleryController::class, 'videoStore']);
 
-    Route::get('page-form', [BagianController::class, 'index']);
+    Route::get('form', [BagianController::class, 'index']);
     Route::post('store-form', [BagianController::class, 'store']);
     Route::get('/detail/{id}', [BagianController::class, 'detail']);
     Route::put('/update-form/{id}', [BagianController::class, 'update']);
@@ -145,7 +138,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('show/{id}', [BagianController::class, 'show']);
 
 
-    Route::get('page-soal', [SoalController::class, 'index']);
+    Route::get('soal', [SoalController::class, 'index']);
     Route::post('store-soal', [SoalController::class, 'store']);
     Route::get('/edit-soal/{id}', [SoalController::class, 'edit']);
     Route::put('/update-soal/{soal}', [SoalController::class, 'update']);
@@ -159,36 +152,36 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('edit-jenis-pedoman/{jenis_pedoman}', [PedomanController::class, 'pedomanEdit']);
     Route::put('update-jenis-pedoman/{jenis_pedoman', [PedomanController::class, 'pedomanUpdate']);
 
-    Route::get('page-pedoman', [PedomanController::class, 'index']);
+    Route::get('pedoman', [PedomanController::class, 'index']);
     Route::post('store-pedoman', [PedomanController::class, 'store']);
     Route::get('/edit-pedoman/{id}', [PedomanController::class, 'edit']);
     Route::put('/update-pedoman/{id}', [PedomanController::class, 'update']);
     Route::get('/delete-pedoman/{id}', [PedomanController::class, 'destroy']);
 
 
-    Route::get('page-pbl', [PblController::class, 'index']);
+    Route::get('pbl', [PblController::class, 'index']);
     Route::post('store-pbl', [PblController::class, 'store']);
     Route::put('/update-pbl/{pbl}', [PblController::class, 'update']);
     Route::get('/delete-pbl/{pbl}', [PblController::class, 'destroy']);
 
-    Route::get('page-penelitian', [PenelitianController::class, 'index']);
+    Route::get('penelitian', [PenelitianController::class, 'index']);
     Route::post('store-penelitian', [PenelitianController::class, 'store']);
     Route::put('/update-penelitian/{penelitian}', [PenelitianController::class, 'update']);
     Route::get('/delete-penelitian/{penelitian}', [PenelitianController::class, 'destroy']);
 
-    Route::get('page-pengabdian', [PengabdianController::class, 'index']);
+    Route::get('pengabdian', [PengabdianController::class, 'index']);
     Route::post('store-pengabdian', [PengabdianController::class, 'store']);
     Route::put('/update-pengabdian/{pengabdian}', [PengabdianController::class, 'update']);
     Route::get('/delete-pengabdian/{pengabdian}', [PengabdianController::class, 'destroy']);
 
-    Route::get('page-survei', [SurveiController::class, 'index']);
+    Route::get('survei', [SurveiController::class, 'index']);
     Route::post('store-survei', [SurveiController::class, 'store']);
     Route::get('/show-survei/{survei}', [SurveiController::class, 'show']);
     Route::get('/edit-survei/{survei}', [SurveiController::class, 'edit']);
     Route::put('/update-survei/{survei}', [SurveiController::class, 'update']);
     Route::get('/delete-survei/{survei}', [SurveiController::class, 'destroy']);
 
-    Route::get('page-tugas-akhir', [TugasAkhirController::class, 'index']);
+    Route::get('tugas-akhir', [TugasAkhirController::class, 'index']);
     Route::post('store-tugas-akhir', [TugasAkhirController::class, 'store']);
     Route::get('/show-tugas-akhir/{id}', [TugasAkhirController::class, 'show']);
     Route::get('/edit-tugas-akhir/{tugas_akhir}', [TugasAkhirController::class, 'edit']);

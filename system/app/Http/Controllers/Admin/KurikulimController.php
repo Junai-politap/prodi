@@ -31,7 +31,7 @@ class KurikulimController extends Controller
         $matakuliah->referensi = request('referensi');
         $matakuliah->save();
 
-        return redirect('page-kurikulum')->with('success', 'Data Berhasil di Simpan');
+        return redirect('kurikulum')->with('success', 'Data Berhasil di Simpan');
     }
 
 
@@ -66,6 +66,6 @@ class KurikulimController extends Controller
     {
         $matakuliah = Matakuliah::find($id);
         $matakuliah->delete();
-        return redirect('page-kurikulum')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

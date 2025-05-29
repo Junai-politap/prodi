@@ -20,7 +20,7 @@ class ProdiController extends Controller
         $prodi->nama = request('nama');
         $prodi->link = request('link');
         $prodi->save();
-        return redirect('page-prodi')->with('success', 'Data Berhasil di Simpan');
+        return redirect('prodi')->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -36,13 +36,13 @@ class ProdiController extends Controller
         $prodi->nama = request('nama'); 
         $prodi->link = request('link');
         $prodi->save();
-        return redirect('page-prodi')->with('success', 'Data Berhasil di Simpan');
+        return redirect('prodi')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Prodi::destroy($id);
 
-        return redirect('page-prodi')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

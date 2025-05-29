@@ -33,6 +33,6 @@ class FasilitasGaleryController extends Controller
     {
         Fasilitas::destroy($id);
 
-        return redirect('page-fasilitas')->with('error', 'Data Berhasil di Hapus');
+        return redirect('fasilitas')->with('error', 'Data Berhasil di Hapus');
     }
 }

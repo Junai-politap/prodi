@@ -21,7 +21,7 @@ class SlideController extends Controller
         $slide->handleUploadSlide();
         $slide->save();
 
-        return redirect('page-slide')->with('success', 'Data Berhasil di Simpan');
+        return redirect('slide')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function show($id)
@@ -41,13 +41,13 @@ class SlideController extends Controller
         $slide = Slide::find($id);
         $slide->title = request('title');
         $slide->handleUploadSlide();
-        return redirect('page-slide')->with('success', 'Data Berhasil di Simpan');
+        return redirect('slide')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Slide::destroy($id);
 
-        return redirect('page-slide')->with('error', 'Data Berhasil di Simpan');
+        return back()->with('error', 'Data Berhasil di Simpan');
     }
 }

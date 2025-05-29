@@ -18,24 +18,26 @@ class VisiMisiController extends Controller
     {
         $visimisi = New Visimisi;
         $visimisi->label = request('label');
+        $visimisi->unit_kerja = request('unit_kerja');
         $visimisi->isi = request('isi');
         $visimisi->save();
-        return redirect('page-visi-misi')->with('success', 'Data Berhasil di Simpan');
+        return back()->with('success', 'Data Berhasil di Simpan');
     }
 
     public function update(Request $request, $id)
     {
         $visimisi = Visimisi::find($id);
         $visimisi->label = request('label');
+        $visimisi->unit_kerja = request('unit_kerja');
         $visimisi->isi = request('isi');
         $visimisi->save();
-        return redirect('page-visi-misi')->with('success', 'Data Berhasil di Simpan');
+        return back()->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Visimisi::destroy($id);
 
-        return redirect('page-visi-misi')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

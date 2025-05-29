@@ -55,7 +55,7 @@ class TugasAkhirController extends Controller
         $tugas_akhir->tahun_angkatan = request('tahun_angkatan');
         $tugas_akhir->save();
 
-        return redirect('page-tugas-akhir')->with('warning', 'Data Berhasil Di Edit');
+        return redirect('tugas-akhir')->with('warning', 'Data Berhasil Di Edit');
     }
 
    

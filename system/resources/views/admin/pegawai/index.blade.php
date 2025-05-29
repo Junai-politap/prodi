@@ -100,9 +100,9 @@
                                         <option value="Sekretaris Jurusan"> Sekretaris Jurusan</option>
                                         <option value="Koordinator Prodi"> Koordinator Prodi</option>
                                         <option value="Ketua Laboratotium"> Ketua Laboratotium</option>
-                                        <option value="Dosen"> Dosen</option>
+                                        <option value="Tenaga Pengajar"> Tenaga Pengajar</option>
                                         <option value="Admin"> Admin</option>
-                                        <option value="Teknisi"> Teknisi</option>
+                                        <option value="Teknisi Laboratorium"> Teknisi Laboratorium</option>
                                     </select>
                                 </div>
                             </div>
@@ -110,8 +110,13 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Unit Kerja</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="unit_kerja"
-                                        value="Prodi DIII Teknologi Informasi">
+                                    <select name="unit_kerja" class="form-control">
+                                        <option value="">Pilih Prodi</option>
+                                        <option value="Prodi DIII Teknologi Listrik">Prodi DIII Teknologi Listrik
+                                        </option>
+                                        <option value="Prodi DIII Teknologi Informasi">Prodi DIII Teknologi Informasi
+                                        </option>
+                                    </select>
                                 </div>
                             </div>
 

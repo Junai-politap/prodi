@@ -33,7 +33,7 @@ class PegawaiController extends Controller
         $pegawai->email = request('email');
         $pegawai->handleUploadFoto();
         $pegawai->save();
-        return redirect('page-pegawai')->with('success', 'Data Berhasil di Simpan');
+        return back()->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -69,13 +69,13 @@ class PegawaiController extends Controller
         $pegawai->email = request('email');
         $pegawai->handleUploadFoto();
         $pegawai->save();
-        return redirect('page-pegawai')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pegawai')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Pegawai::destroy($id);
 
-        return redirect('page-pegawai')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

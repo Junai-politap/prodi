@@ -1,14 +1,15 @@
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
+    @section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
 
     <div class="card">
         <div class="card-header">
             <h3 class="text-center"><strong>Edit Data Pegawai</strong></h3>
         </div>
         <div class="card-body">
-            <form class="form-horizontal" action="{{ url('admin/update-pegawai', $pegawai->id) }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url('admin/update-pegawai', $pegawai->id) }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
-                @method("PUT")
+                @method('PUT')
                 <div class="modal-body">
                     <div class="card-body">
 
@@ -29,14 +30,16 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="nama_lengkap" value="{{ $pegawai->nama_lengkap }}">
+                                <input type="text" class="form-control" name="nama_lengkap"
+                                    value="{{ $pegawai->nama_lengkap }}">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Gelar Belakang</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="gelar_belakang" value="{{ $pegawai->gelar_belakang }}">
+                                <input type="text" class="form-control" name="gelar_belakang"
+                                    value="{{ $pegawai->gelar_belakang }}">
                             </div>
                         </div>
 
@@ -44,26 +47,32 @@
                             <label class="col-sm-3 col-form-label">Jabatan</label>
                             <div class="col-sm-9">
                                 <select name="jabatan" class="form-control">
-                                    <option value="Ketua Jurusan" @if ($pegawai->jabatan == 'Ketua Jurusan') selected @endif>Ketua Jurusan
+                                    <option value="Ketua Jurusan" @if ($pegawai->jabatan == 'Ketua Jurusan') selected @endif>
+                                        Ketua Jurusan
                                     </option>
-                                    <option value="Sekretaris Jurusan" @if ($pegawai->jabatan == 'Sekretaris Jurusan') selected @endif>Sekretaris Jurusan
-                                    </option>
-
-                                    <option value="Koordinator Prodi" @if ($pegawai->jabatan == 'Koordinator Prodi') selected @endif>Koordinator Prodi
-                                    </option>
-
-                                    <option value="Ketua Laboratotium" @if ($pegawai->jabatan == 'Ketua Laboratotium') selected @endif>Ketua Laboratotium
+                                    <option value="Sekretaris Jurusan"
+                                        @if ($pegawai->jabatan == 'Sekretaris Jurusan') selected @endif>Sekretaris Jurusan
                                     </option>
 
-                                    <option value="Dosen" @if ($pegawai->jabatan == 'Dosen') selected @endif>Dosen
+                                    <option value="Koordinator Prodi" @if ($pegawai->jabatan == 'Koordinator Prodi') selected @endif>
+                                        Koordinator Prodi
+                                    </option>
+
+                                    <option value="Ketua Laboratotium"
+                                        @if ($pegawai->jabatan == 'Ketua Laboratotium') selected @endif>Ketua Laboratotium
+                                    </option>
+
+                                    <option value="Tenaga Pengajar" @if ($pegawai->jabatan == 'Tenaga Pengajar') selected @endif>
+                                        Tenaga Pengajar
                                     </option>
 
                                     <option value="Admin" @if ($pegawai->jabatan == 'Admin') selected @endif>Admin
                                     </option>
 
-                                    <option value="Teknisi" @if ($pegawai->jabatan == 'Teknisi') selected @endif>Teknisi
+                                    <option value="Teknisi Laboratorium"
+                                        @if ($pegawai->jabatan == 'Teknisi Laboratorium') selected @endif>Teknisi Laboratorium
                                     </option>
-                                    
+
                                 </select>
                             </div>
                         </div>
@@ -71,22 +80,33 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Unit Kerja</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="unit_kerja"
-                                    value="Prodi DIII Teknologi Informasi">
+                                <select name="unit_kerja" class="form-control">
+                                    <option value="Prodi DIII Teknologi Listrik"
+                                        @if ($pegawai->unit_kerja == 'Prodi DIII Teknologi Listrik') selected @endif>
+                                        Prodi DIII Teknologi Listrik
+                                    </option>
+                                    <option value="Prodi DIII Teknologi Informasi"
+                                        @if ($pegawai->unit_kerja == 'Prodi DIII Teknologi Informasi') selected @endif>
+                                        Prodi DIII Teknologi Informasi
+                                    </option>
+
+                                </select>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Bidang Keahlian</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="bidang_keahlian" value="{{ $pegawai->bidang_keahlian }}">
+                                <input type="text" class="form-control" name="bidang_keahlian"
+                                    value="{{ $pegawai->bidang_keahlian }}">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Tempat Lahir</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="tempat_lahir" value="{{ $pegawai->tempat_lahir }}">
+                                <input type="text" class="form-control" name="tempat_lahir"
+                                    value="{{ $pegawai->tempat_lahir }}">
                             </div>
                         </div>
 
@@ -94,7 +114,8 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Tanggal Lahir</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" name="tanggal_lahir" value="{{ $pegawai->tanggal_lahir }}">
+                                <input type="date" class="form-control" name="tanggal_lahir"
+                                    value="{{ $pegawai->tanggal_lahir }}">
                             </div>
                         </div>
 
@@ -102,9 +123,11 @@
                             <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
                             <div class="col-sm-9">
                                 <select name="jenis_kelamin" class="form-control">
-                                    <option value="Laki-Laki" @if ($pegawai->jenis_kelamin == 'Laki-Laki') selected @endif>Laki-Laki
+                                    <option value="Laki-Laki" @if ($pegawai->jenis_kelamin == 'Laki-Laki') selected @endif>
+                                        Laki-Laki
                                     </option>
-                                    <option value="Perempuan" @if ($pegawai->jenis_kelamin == 'Perempuan') selected @endif>Perempuan
+                                    <option value="Perempuan" @if ($pegawai->jenis_kelamin == 'Perempuan') selected @endif>
+                                        Perempuan
                                     </option>
 
                                 </select>
@@ -115,19 +138,24 @@
                             <label class="col-sm-3 col-form-label">Agama</label>
                             <div class="col-sm-9">
                                 <select name="agama" class="form-control">
-                                    <option value="Islam" @if ($pegawai->agama == 'Islam') selected @endif>Islam</option>
+                                    <option value="Islam" @if ($pegawai->agama == 'Islam') selected @endif>Islam
+                                    </option>
 
                                     <option value="Kristen" @if ($pegawai->agama == 'Kristen') selected @endif>Kristen
                                     </option>
 
-                                    <option value="Khatolik" @if ($pegawai->agama == 'Khatolik') selected @endif>Khatolik
+                                    <option value="Khatolik" @if ($pegawai->agama == 'Khatolik') selected @endif>
+                                        Khatolik
                                     </option>
 
-                                    <option value="Hindhu" @if ($pegawai->agama == 'Hindhu') selected @endif>Hindhu</option>
+                                    <option value="Hindhu" @if ($pegawai->agama == 'Hindhu') selected @endif>Hindhu
+                                    </option>
 
-                                    <option value="Budha" @if ($pegawai->agama == 'Budha') selected @endif>Budha</option>
+                                    <option value="Budha" @if ($pegawai->agama == 'Budha') selected @endif>Budha
+                                    </option>
 
-                                    <option value="Kong Hu Chu" @if ($pegawai->agama == 'Kong Hu Chu') selected @endif>Kong Hu
+                                    <option value="Kong Hu Chu" @if ($pegawai->agama == 'Kong Hu Chu') selected @endif>Kong
+                                        Hu
                                         Chu</option>
 
                                 </select>
@@ -138,21 +166,24 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Alamat</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="alamat" value="{{ $pegawai->alamat }}">
+                                <input type="text" class="form-control" name="alamat"
+                                    value="{{ $pegawai->alamat }}">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">No Hp</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="hp" value="{{ $pegawai->hp }}">
+                                <input type="text" class="form-control" name="hp"
+                                    value="{{ $pegawai->hp }}">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Alamat Email</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="email" value="{{ $pegawai->email }}">
+                                <input type="text" class="form-control" name="email"
+                                    value="{{ $pegawai->email }}">
                             </div>
                         </div>
 

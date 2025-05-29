@@ -20,7 +20,7 @@ class LulusanController extends Controller
         $lulusan->label = request('label');
         $lulusan->isi = request('isi');
         $lulusan->save();
-        return redirect('page-lulusan')->with('success', 'Data Berhasil di Simpan');
+        return back()->with('success', 'Data Berhasil di Simpan');
     }
 
     public function update(Request $request, $id)
@@ -29,13 +29,13 @@ class LulusanController extends Controller
         $lulusan->label = request('label');
         $lulusan->isi = request('isi');
         $lulusan->save();
-        return redirect('page-lulusan')->with('success', 'Data Berhasil di Simpan');
+        return back()->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Lulusan::destroy($id);
 
-        return redirect('page-lulusan')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

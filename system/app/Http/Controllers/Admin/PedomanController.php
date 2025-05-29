@@ -50,7 +50,7 @@ class PedomanController extends Controller
         $pedoman->handleUploadFilePdf();
         $pedoman->handleUploadFileWord();
         $pedoman->save();
-        return redirect('page-pedoman')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pedoman')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function show($id)
@@ -76,6 +76,6 @@ class PedomanController extends Controller
     {
         Pedoman::destroy($id);
 
-        return redirect('page-pedoman')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

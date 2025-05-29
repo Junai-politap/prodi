@@ -13,7 +13,7 @@ class PelayananController extends Controller
     public function index(){
         $data['list_jenis_pelayanan'] = Jenis_pelayanan::all();
         $data['list_pelayanan'] = Pelayanan::all();
-        return view('admin/pelayanan.index', $data);
+        return view('admin.pelayanan.index', $data);
     }
 
 
@@ -23,7 +23,7 @@ class PelayananController extends Controller
         $jenis_pelayanan->nama_jenis_pelayanan = request('nama_jenis_pelayanan');
         $jenis_pelayanan->save();
 
-        return redirect('page-pelayanan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pelayanan')->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -36,7 +36,7 @@ class PelayananController extends Controller
         $pelayanan->handleUploadFile();
         $pelayanan->save();
 
-        return redirect('page-pelayanan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pelayanan')->with('success', 'Data Berhasil di Simpan');
     }
 
 
@@ -63,7 +63,7 @@ class PelayananController extends Controller
         $pelayanan->handleUploadFile();
         $pelayanan->save();
 
-        return redirect('page-pelayanan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pelayanan')->with('success', 'Data Berhasil di Simpan');
     }
 
 
@@ -75,7 +75,7 @@ class PelayananController extends Controller
         $jenis_pelayanan = Jenis_pelayanan::find($id);
         $jenis_pelayanan->delete();
 
-        return redirect('page-pelayanan')->with('error', 'Data Berhasil di Hapus');
+        return redirect('pelayanan')->with('error', 'Data Berhasil di Hapus');
 
     }
 }

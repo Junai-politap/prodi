@@ -40,7 +40,7 @@ class MasterMahasiswaController extends Controller
         $mahasiswa->ipk = request('ipk');
         $mahasiswa->handleUploadFoto();
         $mahasiswa->save();
-        return redirect('page-mahasiswa')->with('success', 'Data Berhasil di Simpan');
+        return redirect('mahasiswa')->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -78,13 +78,13 @@ class MasterMahasiswaController extends Controller
         $mahasiswa->ipk = request('ipk');
         $mahasiswa->handleUploadFoto();
         $mahasiswa->save();
-        return redirect('page-mahasiswa')->with('success', 'Data Berhasil di Simpan');
+        return redirect('mahasiswa')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Mahasiswa::destroy($id);
 
-        return redirect('page-mahasiswa')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

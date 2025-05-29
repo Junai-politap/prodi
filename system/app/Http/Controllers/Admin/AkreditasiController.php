@@ -25,7 +25,7 @@ class AkreditasiController extends Controller
         $akreditasi->handleUploadFilePdf();
         $akreditasi->save();
 
-        return redirect('page-akreditasi')->with('success', 'Data Berhasil di Simpan');
+        return redirect('akreditasi')->with('success', 'Data Berhasil di Simpan');
 
     }
 

@@ -1,8 +1,7 @@
-
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
+    @section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
 
-@include('section.notif')
+    @include('section.notif')
     <div class="card">
         <div class="card-header">
             <h3 class="card-title"><strong> </strong></h3>
@@ -24,11 +23,13 @@
                         <tr>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <button class="btn btn-warning" data-toggle="modal" data-target="#modal-lg{{ $visimisi->id }}"><span
-                                        class="fa fa-edit"></span> Edit</button>
+                                    <button class="btn btn-warning" data-toggle="modal"
+                                        data-target="#modal-lg{{ $visimisi->id }}"><span class="fa fa-edit"></span>
+                                        Edit</button>
 
-                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("admin/delete-visi-misi/$visimisi->id") }}" class="btn btn-danger"><span
-                                            class="fa fa-trash"></span> Hapus</a>
+                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
+                                        href="{{ url("admin/delete-visi-misi/$visimisi->id") }}"
+                                        class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
                             <td class="text-center">{{ $visimisi->label }}</td>
@@ -43,33 +44,54 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form class="form-horizontal" action="{{ url('admin/update-visi-misi', $visimisi->id) }}" method="POST"
+                                    <form class="form-horizontal"
+                                        action="{{ url('admin/update-visi-misi', $visimisi->id) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
-                                        @method("PUT")
+                                        @method('PUT')
                                         <div class="modal-body">
                                             <div class="card-body">
-                    
+
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Label</label>
                                                     <div class="col-sm-9">
-                                                        <input type="text" class="form-control" name="label" value="{{ $visimisi->label }}">
+                                                        <input type="text" class="form-control" name="label"
+                                                            value="{{ $visimisi->label }}">
                                                     </div>
                                                 </div>
-                    
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Unit Kerja</label>
+                                                    <div class="col-sm-9">
+                                                        <select name="unit_kerja" class="form-control">
+                                                            <option value="Program Studi D3 Teknologi Listrik"
+                                                                @if ($visimisi->unit_kerja == 'Program Studi D3 Teknologi Listrik') selected @endif>
+                                                                Program Studi D3 Teknologi Listrik
+                                                            </option>
+                                                            <option value="Program Studi D3 Teknologi Informasi"
+                                                                @if ($visimisi->unit_kerja == 'Program Studi D3 Teknologi Informasi') selected @endif>
+                                                                Program Studi D3 Teknologi Informasi
+                                                            </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Isi</label>
                                                     <div class="col-sm-9">
                                                         <textarea name="isi" class="summernote">{{ $visimisi->isi }}</textarea>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="modal-footer justify-content-between">
                                             <button type="button" class="btn btn-default" data-dismiss="modal"><span
                                                     class="fa fa-times"></span> Close</button>
-                                            <button class="btn btn-primary"><span class="fa fa-save"></span> Simpan</button>
+                                            <button class="btn btn-primary"><span class="fa fa-save"></span>
+                                                Simpan</button>
                                         </div>
                                     </form>
                                 </div>
@@ -105,12 +127,25 @@
                             </div>
 
                             <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Program Studi</label>
+                                <div class="col-sm-9">
+                                    <select name="unit_kerja" class="form-control">
+                                        <option value="">Pilih Prodi</option>
+                                        <option value="Program Studi D3 Teknologi Listrik">Program Studi D3 Teknologi Listrik
+                                        </option>
+                                        <option value="Program Studi D3 Teknologi Informasi">Program Studi D3 Teknologi Informasi
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Isi</label>
                                 <div class="col-sm-9">
                                     <textarea name="isi" class="summernote"></textarea>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="modal-footer justify-content-between">

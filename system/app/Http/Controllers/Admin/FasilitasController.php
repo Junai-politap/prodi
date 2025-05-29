@@ -35,7 +35,7 @@ class FasilitasController extends Controller
         $fasilitas->id_jenis_fasilitas = request('id_jenis_fasilitas');
         $fasilitas->handleUploadFoto();
         $fasilitas->save();
-        return redirect('page-fasilitas')->with('success', 'Data Berhasil di Simpan');
+        return redirect('fasilitas')->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -63,13 +63,13 @@ class FasilitasController extends Controller
         $fasilitas->id_jenis_fasilitas = request('id_jenis_fasilitas');
         $fasilitas->handleUploadFoto();
         $fasilitas->save();
-        return redirect('page-fasilitas')->with('success', 'Data Berhasil di Simpan');
+        return redirect('fasilitas')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Fasilitas::destroy($id);
 
-        return redirect('page-fasilitas')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

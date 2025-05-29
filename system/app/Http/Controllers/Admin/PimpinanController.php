@@ -32,7 +32,7 @@ class PimpinanController extends Controller
         $pimpinan->email = request('email');
         $pimpinan->handleUploadFoto();
         $pimpinan->save();
-        return redirect('page-pimpinan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pimpinan')->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -67,13 +67,13 @@ class PimpinanController extends Controller
         $pimpinan->email = request('email');
         $pimpinan->handleUploadFoto();
         $pimpinan->save();
-        return redirect('page-pimpinan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('pimpinan')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)
     {
         Pimpinan::destroy($id);
 
-        return redirect('page-pimpinan')->with('error', 'Data Berhasil di Hapus');
+        return back()->with('error', 'Data Berhasil di Hapus');
     }
 }

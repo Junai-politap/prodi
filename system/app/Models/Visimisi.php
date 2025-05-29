@@ -7,7 +7,7 @@ use App\Models\Model;
 class VisiMisi extends Model
 {
 
-	protected $table = "visimisi";
+	protected $table = "visimisi_prodi";
 	
 
 

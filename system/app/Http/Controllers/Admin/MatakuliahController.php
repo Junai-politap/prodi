@@ -30,7 +30,7 @@ class MatakuliahController extends Controller
         $matakuliah->bahasan = request('bahasan');
         $matakuliah->save();
 
-        return redirect('page-mata-kuliah')->with('success', 'Data Berhasil di Simpan');
+        return redirect('mata-kuliah')->with('success', 'Data Berhasil di Simpan');
     }
 
 
@@ -62,7 +62,7 @@ class MatakuliahController extends Controller
 
         $matakuliah->save();
 
-        return redirect('page-mata-kuliah')->with('success', 'Data Berhasil di Simpan');
+        return redirect('mata-kuliah')->with('success', 'Data Berhasil di Simpan');
     }
 
 

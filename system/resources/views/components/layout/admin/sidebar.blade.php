@@ -9,7 +9,7 @@
 @endphp
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-    <a href="{{ url('page-admin') }}" class="brand-link">
+    <a href="{{ url('admin') }}" class="brand-link">
         <img src="{{ url('public/admin') }}/logo.ico" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
         <span class="brand-text font-weight-light">INFORMATIKA</span>
@@ -30,7 +30,7 @@
                 data-accordion="false">
 
                 <li class="nav-item has-treeview menu-open">
-                    <a href="{{ url('admin') }}" class="nav-link {{ checkRouteActive('admin/page-admin') }}">
+                    <a href="{{ url('admin') }}" class="nav-link {{ checkRouteActive('admin/admin') }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -49,23 +49,23 @@
                     <ul class="nav nav-treeview">
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-pimpinan') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-pegawai') }}">
+                            <a href="{{ url('admin/pimpinan') }}"
+                                class="nav-link {{ checkRouteActive('admin/pegawai') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pimpinan</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-pegawai') }}" class="nav-link {{ checkRouteActive('admin/page-pegawai') }}">
+                            <a href="{{ url('admin/pegawai') }}" class="nav-link {{ checkRouteActive('admin/pegawai') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pegawai Prodi</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-mahasiswa') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-mahasiswa') }}">
+                            <a href="{{ url('admin/mahasiswa') }}"
+                                class="nav-link {{ checkRouteActive('admin/mahasiswa') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>
                                     Mahasiswa
@@ -75,16 +75,16 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-visi-misi') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-visi-misi') }}">
+                            <a href="{{ url('admin/visi-misi') }}"
+                                class="nav-link {{ checkRouteActive('admin/visi-misi') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Visi & Misi</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-lulusan') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-lulusan') }}">
+                            <a href="{{ url('admin/lulusan') }}"
+                                class="nav-link {{ checkRouteActive('admin/lulusan') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Profil Lulusan</p>
                             </a>
@@ -103,39 +103,39 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-kurikulum') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-kurikulum') }}">
+                            <a href="{{ url('admin/kurikulum') }}"
+                                class="nav-link {{ checkRouteActive('admin/kurikulum') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Kurikulum</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-akreditasi') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-akreditasi') }}">
+                            <a href="{{ url('admin/akreditasi') }}"
+                                class="nav-link {{ checkRouteActive('admin/akreditasi') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Akreditasi</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-pedoman') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-pedoman') }}">
+                            <a href="{{ url('admin/pedoman') }}"
+                                class="nav-link {{ checkRouteActive('admin/pedoman') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pedoman</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-fasilitas') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-fasilitas') }}">
+                            <a href="{{ url('admin/fasilitas') }}"
+                                class="nav-link {{ checkRouteActive('admin/fasilitas') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Fasilitas</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-pelayanan') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-pelayanan') }}">
+                            <a href="{{ url('admin/pelayanan') }}"
+                                class="nav-link {{ checkRouteActive('admin/pelayanan') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pelayanan</p>
                             </a>
@@ -154,15 +154,15 @@
                     <ul class="nav nav-treeview">
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-pbl') }}" class="nav-link {{ checkRouteActive('admin/page-pbl') }}">
+                            <a href="{{ url('admin/pbl') }}" class="nav-link {{ checkRouteActive('admin/pbl') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>PBL</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-tugas-akhir') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-tugas-akhir') }}">
+                            <a href="{{ url('admin/tugas-akhir') }}"
+                                class="nav-link {{ checkRouteActive('admin/tugas-akhir') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>
                                     Tugas Akhir
@@ -172,16 +172,16 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-penelitian') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-penelitian-dosen') }}">
+                            <a href="{{ url('admin/penelitian') }}"
+                                class="nav-link {{ checkRouteActive('admin/penelitian-dosen') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Penelitian Dosen</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/page-pengabdian') }}"
-                                class="nav-link {{ checkRouteActive('admin/page-pengabdian-dosen') }}">
+                            <a href="{{ url('admin/pengabdian') }}"
+                                class="nav-link {{ checkRouteActive('admin/pengabdian-dosen') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pengabdian Dosen</p>
                             </a>
@@ -191,7 +191,7 @@
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('admin/page-form') }}" class="nav-link {{ checkRouteActive('admin/page-form') }}">
+                    <a href="{{ url('admin/form') }}" class="nav-link {{ checkRouteActive('admin/form') }}">
                         <i class="nav-icon fa fa-industry"></i>
                         <p>
                             Tracer Study
@@ -332,7 +332,7 @@
                 </li> --}}
                 
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('admin/page-survei') }}" class="nav-link {{ checkRouteActive('admin/survei') }}">
+                    <a href="{{ url('admin/survei') }}" class="nav-link {{ checkRouteActive('admin/survei') }}">
                         <i class="nav-icon fa fa-file"></i>
                         <p>
                             Laporan Survei
@@ -341,7 +341,7 @@
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('admin/page-berita') }}" class="nav-link {{ checkRouteActive('admin/page-berita') }}">
+                    <a href="{{ url('admin/berita') }}" class="nav-link {{ checkRouteActive('admin/berita') }}">
                         <i class="nav-icon fa fa-newspaper"></i>
                         <p>
                             Berita
@@ -350,7 +350,7 @@
 
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('admin/page-slide') }}" class="nav-link {{ checkRouteActive('admin/page-slide') }}">
+                    <a href="{{ url('admin/slide') }}" class="nav-link {{ checkRouteActive('admin/slide') }}">
                         <i class="nav-icon fa fa-home"></i>
                         <p>
                             Home Base

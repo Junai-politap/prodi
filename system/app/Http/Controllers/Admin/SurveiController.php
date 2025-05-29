@@ -52,7 +52,7 @@ class SurveiController extends Controller
         $survei->handleUploadFile();
         $survei->save();
 
-        return redirect('page-survei')->with('success', 'Data Berhasil Diedit');
+        return redirect('survei')->with('success', 'Data Berhasil Diedit');
     }
 
 
