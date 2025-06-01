@@ -24,7 +24,7 @@ class BeritaController extends Controller
         $berita->status = 1;
         $berita->handleUploadGambarBerita();
         $berita->save();
-        return redirect('berita')->with('success', 'Data Berhasil di Simpan');
+        return redirect('admin/berita')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function show($id)
@@ -48,7 +48,7 @@ class BeritaController extends Controller
         $berita->tanggal_kegiatan = request('tanggal_kegiatan');
         $berita->handleUploadGambarBerita();
         $berita->save();
-        return redirect('berita')->with('success', 'Data Berhasil di Simpan');
+        return redirect('admin/berita')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)

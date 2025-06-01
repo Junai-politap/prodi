@@ -15,6 +15,7 @@
                                     <a href="{{ url("berita-show/$berita->id") }}">
                                         <div class="img-holder">
                                             <img src="{{ url("public/$berita->gambar") }}"
+                                                onerror="this.src='{{ url('public/app/berita') }}/berita.jpg';"
                                                 style="object-fit: cover; position: static; width: 100%; height: 400px;">
                                             <div class="overlay-style-one">
                                                 <div class="box">

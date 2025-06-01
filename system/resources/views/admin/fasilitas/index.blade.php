@@ -1,15 +1,15 @@
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
+    @section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
 
     @include('section.notif')
     <div class="card">
         <div class="card-header">
             <h3 class="card-title"><strong> Data Fasilitas</strong></h3>
 
-            <button class="btn btn-primary float-right" style="margin-left: 1%" data-toggle="modal" data-target="#modal-lg"><span
-                    class="fa fa-plus"></span> Tambah Data</button>
+            <button class="btn btn-primary float-right" style="margin-left: 1%" data-toggle="modal"
+                data-target="#modal-lg"><span class="fa fa-plus"></span> Tambah Data</button>
 
-            <button class="btn btn-primary float-right"  data-toggle="modal" data-target="#modal-lg-jenis"><span
+            <button class="btn btn-primary float-right" data-toggle="modal" data-target="#modal-lg-jenis"><span
                     class="fa fa-plus"></span> Tambah Jenis Fasilitas</button>
         </div>
         <div class="card-body">
@@ -26,15 +26,15 @@
                         <tr>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ url("admin/show-fasilitas/$fasilitas->id") }}" class="btn btn-info"><span
-                                            class="fa fa-info"></span> Lihat</a>
+                                    <a href="{{ url("admin/fasilitas/show/$fasilitas->id") }}"
+                                        class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("admin/edit-fasilitas/$fasilitas->id") }}" class="btn btn-warning"><span
-                                            class="fa fa-edit"></span> Edit</a>
+                                    <a href="{{ url("admin/fasilitas/edit/$fasilitas->id") }}"
+                                        class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-fasilitas/$fasilitas->id") }}" class="btn btn-danger"><span
-                                            class="fa fa-trash"></span> Hapus</a>
+                                        href="{{ url("admin/fasilitas/delete/$fasilitas->id") }}"
+                                        class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
                             <td class="text-center">{{ $fasilitas->nama_fasilitas }}</td>
@@ -56,7 +56,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-fasilitas') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/fasilitas/store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
@@ -82,7 +82,8 @@
                                     <select name="id_jenis_fasilitas" class="form-control">
                                         <option value=""> Pilih Jenis Fasilitas</option>
                                         @foreach ($list_jenis_fasilitas as $jenis_fasilitas)
-                                            <option value="{{ $jenis_fasilitas->id }}"> {{ $jenis_fasilitas->nama }}</option>
+                                            <option value="{{ $jenis_fasilitas->id }}"> {{ $jenis_fasilitas->nama }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -91,12 +92,13 @@
                             <div class="form-group row">
                                 <label class="col-sm-12 col-md-3 col-form-label">Foto</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="file" name="foto" accept=".jpg, .png, .jpeg">
+                                    <input class="form-control" type="file" name="foto"
+                                        accept=".jpg, .png, .jpeg">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-12 col-md-3 col-form-label"></label>
-                                <div class="col-sm-12 col-md-9">                                
+                                <div class="col-sm-12 col-md-9">
                                     * Foto tidak boleh lebih dari 200Kb
                                 </div>
                             </div>
@@ -124,7 +126,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-jenis-fasilitas') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/jenis-fasilitas/store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

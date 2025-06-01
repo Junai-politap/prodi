@@ -29,11 +29,11 @@
                                     {{-- <a href="{{ url("admin/show-mata-kuliah/$mata_kuliah->id") }}"
                                         class="btn btn-info"><span class="fa fa-info"></span> Lihat</a> --}}
 
-                                    <a href="{{ url("admin/edit-mata-kuliah/$mata_kuliah->id") }}"
+                                    <a href="{{ url("admin/mata-kuliah/edit/$mata_kuliah->id") }}"
                                         class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-mata-kuliah/$mata_kuliah->id") }}"
+                                        href="{{ url("admin/mata-kuliah/delete/$mata_kuliah->id") }}"
                                         class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -72,7 +72,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-mata-kuliah') }}" method="post"
+                <form class="form-horizontal" action="{{ url('admin/mata-kuliah/store') }}" method="post"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

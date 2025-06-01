@@ -5,7 +5,7 @@
         <div class="card-header">
             <h3 class="card-title">Tambah Jenis Pelayanan</h3>
         </div>
-        <form class="form-horizontal" action="{{ url('admin/storejenis') }}" method="post">
+        <form class="form-horizontal" action="{{ url('admin/pelayanan/store-jenis') }}" method="post">
             @csrf
             <div class="card-body">
                 <div class="form-group row">
@@ -45,10 +45,10 @@
                             <td>
                                 <div class="btn-group">
 
-                                    <a href="{{ url("edit/$pelayanan->id_pelayanan") }}" class="btn btn-warning"><span
+                                    <a href="{{ url("pelayanan/edit/$pelayanan->id_pelayanan") }}" class="btn btn-warning"><span
                                             class="fa fa-edit"></span> Edit</a>
 
-                                    <a href="{{ url("delete/$pelayanan->id_pelayanan") }}" class="btn btn-danger"><span
+                                    <a href="{{ url("pelayanan/delete/$pelayanan->id_pelayanan") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Lihat</a>
                                 </div>
                             </td>
@@ -72,7 +72,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('storepelayanan') }}" method="post"
+                <form class="form-horizontal" action="{{ url('admin/pelayanan/store-pelayanan') }}" method="post"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

@@ -29,13 +29,13 @@
                             <td class="text-center"> {{ $no++ }}</td>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ url("admin/show-jenis-pedoman/$jenis_pedoman->id") }}"
+                                    <a href="{{ url("admin/jenis-pedoman/show/$jenis_pedoman->id") }}"
                                         class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("admin/edit-jenis-pedoman/$jenis_pedoman->id") }}"
+                                    <a href="{{ url("admin/jenis-pedoman/edit/$jenis_pedoman->id") }}"
                                         class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
-                                    {{-- <a href="{{ url("delete-jenis-pedoman/$jenis_pedoman->id") }}" class="btn btn-danger"><span
+                                    {{-- <a href="{{ url("admin/jenis-pedoman/delete/$jenis_pedoman->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a> --}}
                                 </div>
                             </td>
@@ -57,7 +57,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-jenis-pedoman') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/jenis-pedoman/store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

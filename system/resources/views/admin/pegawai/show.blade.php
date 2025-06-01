@@ -3,7 +3,7 @@
 
     <div class="card"><br>
         <div class="header">
-            <a href="{{ url('admin/page-pegawai') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span>
+            <a href="{{ url('admin/pegawai') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span>
                 Kembali</a>
         </div>
         <div class="row mt-3">
@@ -15,9 +15,8 @@
                                 onerror="this.src='https://bootdey.com/img/Content/avatar/avatar7.png';" alt="avatar"
                                 class="rounded">
                         @endif
-                        <h2 class="my-3">{{ $pegawai->jabatan }}</h2>
-                        <h4 class="my-3">{{ $pegawai->nama_lengkap }}</h4>
-                        <h4 class="my-3">{{ $pegawai->nip }}</h4>
+                        <h2 class="my-3">{{ $pegawai->nama_lengkap }}, {{ $pegawai->gelar_belakang }}</h2>
+                        <h4 class="my-3">{{ $pegawai->jabatan }}</h4>
                     </div>
                 </div>
             </div>
@@ -26,10 +25,10 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-5">
-                                <p class="mb-0">NIK</p>
+                                <p class="mb-0">NIP</p>
                             </div>
                             <div class="col-sm-7">
-                                <p class="text-muted mb-0">{{ $pegawai->nik }}</p>
+                                <p class="text-muted mb-0">{{ $pegawai->nip }}</p>
                             </div>
                         </div>
                         <hr>

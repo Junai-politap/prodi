@@ -6,7 +6,7 @@
             <h3 class="text-center"><strong>Edit Data Pegawai</strong></h3>
         </div>
         <div class="card-body">
-            <form class="form-horizontal" action="{{ url('admin/update-pegawai', $pegawai->id) }}" method="POST"
+            <form class="form-horizontal" action="{{ url('admin/pegawai/update', $pegawai->id) }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 @method('PUT')

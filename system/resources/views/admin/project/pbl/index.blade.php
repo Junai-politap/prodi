@@ -37,7 +37,7 @@
                                     </button>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-pbl/$pbl->id") }}" class="btn btn-danger">
+                                        href="{{ url("admin/pbl/delete/$pbl->id") }}" class="btn btn-danger">
                                         <span class="fa fa-trash"></span> Hapus
                                     </a>
 
@@ -117,7 +117,7 @@
                                                         aria-hidden="true">×</button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form action="{{ url('admin/update-pbl', $pbl->id) }}" method="post"
+                                                    <form action="{{ url('admin/pbl/update', $pbl->id) }}" method="post"
                                                         enctype="multipart/form-data">
                                                         @csrf
                                                         @method('PUT')
@@ -228,7 +228,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-pbl') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/pbl/store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

@@ -38,7 +38,7 @@
                                     </button>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-penelitian/$penelitian->id") }}" class="btn btn-danger">
+                                        href="{{ url("admin/penelitian/delete/$penelitian->id") }}" class="btn btn-danger">
                                         <span class="fa fa-trash"></span> Hapus
                                     </a>
 
@@ -128,7 +128,7 @@
                                                         aria-hidden="true">×</button>
                                                 </div>
                                                 <div class="modal-body text-left">
-                                                    <form action="{{ url('admin/update-penelitian', $penelitian->id) }}" method="post"
+                                                    <form action="{{ url('admin/penelitian/update', $penelitian->id) }}" method="post"
                                                         enctype="multipart/form-data">
                                                         @csrf
                                                         @method("PUT")
@@ -211,7 +211,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-penelitian') }}" method="POST" enctype="multipart/form-data">
+                <form class="form-horizontal" action="{{ url('admin/penelitian/store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="card-body">

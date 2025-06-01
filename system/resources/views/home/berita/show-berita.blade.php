@@ -1,5 +1,5 @@
 <x-home>
-@section('title', 'Lihat Berita Prodi - ')
+    @section('title', 'Lihat Berita Prodi - ')
 
     @include('section.page-title', [
         'page_title' => 'Lihat Berita',
@@ -39,7 +39,9 @@
                         </div>
                         <div class="row" style="margin-top:-5%;">
                             <div class="col-md-12">
-                                <img src="{{ url("public/$berita->gambar") }}" alt="" class="img">
+                                <img src="{{ url("public/$berita->gambar") }}"
+                                    onerror="this.src='{{ url('public/app/berita') }}/berita.jpg';"
+                                    style="object-fit: cover; position: static; width: 100%; height: 400px;">
                             </div>
                         </div>
                         <br>
@@ -65,7 +67,9 @@
                                     @if ($berita->status == 1)
                                         <li>
                                             <div class="img-holder">
-                                                <img src="{{ url("public/$berita->gambar") }}" alt="Awesome Image">
+                                                 <img src="{{ url("public/$berita->gambar") }}"
+                                                onerror="this.src='{{ url('public/app/berita') }}/berita.jpg';"
+                                                style="object-fit: cover; position: static; width: 100%; height: 100px;">
                                                 <div class="overlay-style-one">
                                                     <div class="box">
                                                         <div class="content">
@@ -98,8 +102,8 @@
         </div>
     </section>
 
-    
-    
+
+
     @push('script')
         <script>
             function changePicture(url) {
@@ -107,7 +111,7 @@
             }
         </script>
     @endpush
-    
+
     @push('style')
         <style>
             .title {

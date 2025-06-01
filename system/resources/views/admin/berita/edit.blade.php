@@ -3,7 +3,7 @@
     <div class="card">
         <h5 class="card-header">Edit Berita</h5>
         <div class="card-body">
-            <form id="form" data-parsley-validate="" action="{{ url('update-berita', $berita->id) }}" method="POST"
+            <form id="form" data-parsley-validate="" action="{{ url('admin/berita/update', $berita->id) }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 @method("PUT")
@@ -31,8 +31,9 @@
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Gambar</label>
                     <div class="col-md-4">
-                        <img class="img-responsive" src='{{ url("public/$berita->gambar") }}'
-                            style="object-fit: cover; position: static; width: 50%; height: 200px;">
+                        <img src="{{ url("public/$berita->gambar") }}"
+                                                onerror="this.src='{{ url('public/app/berita') }}/berita.jpg';"
+                                                style="object-fit: cover; position: static; width: 60%; height: 300px;">
                     </div>
 
                     <div class="col-md-6">

@@ -28,7 +28,7 @@
                                         Edit</button>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-visi-misi/$visimisi->id") }}"
+                                        href="{{ url("admin/visi-misi/delete/$visimisi->id") }}"
                                         class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -45,7 +45,7 @@
                                         </button>
                                     </div>
                                     <form class="form-horizontal"
-                                        action="{{ url('admin/update-visi-misi', $visimisi->id) }}" method="POST"
+                                        action="{{ url('admin/visi-misi/update', $visimisi->id) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
@@ -113,7 +113,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-visi-misi') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/visi-misi/store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

@@ -44,7 +44,7 @@
                                                         </button>
                                                     </div>
                                                     <form class="form-horizontal"
-                                                        action="{{ url('admin/update-pedoman', $pedoman->id) }}" method="POST"
+                                                        action="{{ url('admin/pedoman/update', $pedoman->id) }}" method="POST"
                                                         enctype="multipart/form-data">
                                                         @csrf
                                                         @method('PUT')
@@ -102,7 +102,7 @@
                                             </div>
                                         </div>
 
-                                        <a href="{{ url("admin/delete-pedoman/$pedoman->id") }}" class="btn btn-danger"><span
+                                        <a href="{{ url("admin/pedoman/delete/$pedoman->id") }}" class="btn btn-danger"><span
                                                 class="fa fa-trash"></span> Hapus</a>
                                     </div>
                                 </td>

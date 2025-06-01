@@ -1,4 +1,4 @@
-@<x-home>
+<x-home>
 @section('title', 'Pengabdian - ')
  
     @include('section.page-title', [

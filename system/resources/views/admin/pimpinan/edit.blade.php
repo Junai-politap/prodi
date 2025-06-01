@@ -6,12 +6,12 @@
     <div class="card">
         <div class="card-header">
             
-                <a href="{{ url('admin/page-pimpinan') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span> Kembali</a>
+                <a href="{{ url('admin/pimpinan') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span> Kembali</a>
             
             <h3 class="text-center"><strong>Edit Data Pimpinan</strong></h3>
         </div>
         <div class="card-body">
-            <form class="form-horizontal" action="{{ url('admin/update-pimpinan', $pimpinan->id) }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url('admin/pimpinan/update', $pimpinan->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method("PUT")
                 <div class="modal-body">

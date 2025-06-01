@@ -31,7 +31,7 @@
                                         Edit</button>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-akreditasi/$akreditasi->id") }}"
+                                        href="{{ url("admin/akreditasi/delete/$akreditasi->id") }}"
                                         class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -51,7 +51,7 @@
                                         </button>
                                     </div>
                                     <form class="form-horizontal"
-                                        action="{{ url('admin/update-akreditasi', $akreditasi->id) }}" method="post"
+                                        action="{{ url('admin/akreditasi/update', $akreditasi->id) }}" method="post"
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
@@ -129,7 +129,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-akreditasi') }}" method="post"
+                <form class="form-horizontal" action="{{ url('admin/akreditasi/store') }}" method="post"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

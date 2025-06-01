@@ -35,76 +35,76 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [AdminController::class, 'index']);
 
     Route::get('pegawai', [PegawaiController::class, 'index']);
-    Route::post('store-pegawai', [PegawaiController::class, 'store']);
-    Route::get('/show-pegawai/{id}', [PegawaiController::class, 'show']);
-    Route::get('/edit-pegawai/{id}', [PegawaiController::class, 'edit']);
-    Route::put('/update-pegawai/{id}', [PegawaiController::class, 'update']);
-    Route::get('/delete-pegawai/{id}', [PegawaiController::class, 'destroy']);
+    Route::post('pegawai/store', [PegawaiController::class, 'store']);
+    Route::get('/pegawai/show/{id}', [PegawaiController::class, 'show']);
+    Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
+    Route::put('/pegawai/update/{id}', [PegawaiController::class, 'update']);
+    Route::get('/pegawai/delete/{id}', [PegawaiController::class, 'destroy']);
 
     Route::get('pimpinan', [PimpinanController::class, 'index']);
-    Route::post('store-pimpinan', [PimpinanController::class, 'store']);
-    Route::get('/show-pimpinan/{id}', [PimpinanController::class, 'show']);
-    Route::get('/edit-pimpinan/{id}', [PimpinanController::class, 'edit']);
-    Route::put('/update-pimpinan/{id}', [PimpinanController::class, 'update']);
-    Route::get('/delete-pimpinan/{id}', [PimpinanController::class, 'destroy']);
+    Route::post('pimpinan/store', [PimpinanController::class, 'store']);
+    Route::get('/pimpinan/show/{id}', [PimpinanController::class, 'show']);
+    Route::get('/pimpinan/edit/{id}', [PimpinanController::class, 'edit']);
+    Route::put('/pimpinan/update/{id}', [PimpinanController::class, 'update']);
+    Route::get('/pimpinan/delete/{id}', [PimpinanController::class, 'destroy']);
 
     Route::get('visi-misi', [VisiMisiController::class, 'index']);
-    Route::post('store-visi-misi', [VisiMisiController::class, 'store']);
-    Route::put('/update-visi-misi/{id}', [VisiMisiController::class, 'update']);
-    Route::get('/delete-visi-misi/{id}', [VisiMisiController::class, 'destroy']);
+    Route::post('visi-misi/store', [VisiMisiController::class, 'store']);
+    Route::put('visi-misi/update/{id}', [VisiMisiController::class, 'update']);
+    Route::get('visi-misi/delete/{id}', [VisiMisiController::class, 'destroy']);
 
     Route::get('lulusan', [LulusanController::class, 'index']);
-    Route::post('store-lulusan', [LulusanController::class, 'store']);
-    Route::put('/update-lulusan/{id}', [LulusanController::class, 'update']);
-    Route::get('/delete-lulusan/{id}', [LulusanController::class, 'destroy']);
+    Route::post('lulusan/store', [LulusanController::class, 'store']);
+    Route::put('lulusan/update/{id}', [LulusanController::class, 'update']);
+    Route::get('lulusan/delete/{id}', [LulusanController::class, 'destroy']);
 
     Route::get('kurikulum', [KurikulimController::class, 'index']);
-    Route::post('store-mata-kuliah', [KurikulimController::class, 'store']);
-    Route::get('edit-mata-kuliah/{id}', [KurikulimController::class, 'edit']);
-    Route::put('/update-mata-kuliah/{id}', [KurikulimController::class, 'update']);
-    Route::get('/delete-mata-kuliah/{id}', [KurikulimController::class, 'destroy']);
+    Route::post('mata-kuliah/store', [KurikulimController::class, 'store']);
+    Route::get('mata-kuliah/edit/{id}', [KurikulimController::class, 'edit']);
+    Route::put('/mata-kuliah/update/{id}', [KurikulimController::class, 'update']);
+    Route::get('/mata-kuliah/delete/{id}', [KurikulimController::class, 'destroy']);
 
 
     Route::get('pelayanan', [PelayananController::class, 'index']);
-    Route::post('storejenis', [PelayananController::class, 'storejenis']);
-    Route::post('storepelayanan', [PelayananController::class, 'storepelayanan']);
-    Route::get('/show/{id}', [PelayananController::class, 'show']);
-    Route::get('edit/{id}', [PelayananController::class, 'edit']);
-    Route::put('/update-pelayanan/{id}', [PelayananController::class, 'update']);
-    Route::get('/delete/{id}', [PelayananController::class, 'destroy']);
+    Route::post('pelayanan/store-jenis', [PelayananController::class, 'storejenis']);
+    Route::post('pelayanan/store-pelayanan', [PelayananController::class, 'storepelayanan']);
+    Route::get('/pelayanan/show/{id}', [PelayananController::class, 'show']);
+    Route::get('pelayanan/edit/{id}', [PelayananController::class, 'edit']);
+    Route::put('/pelayanan/update/{id}', [PelayananController::class, 'update']);
+    Route::get('/pelayanan/delete/{id}', [PelayananController::class, 'destroy']);
 
     Route::get('berita', [BeritaController::class, 'index']);
-    Route::post('store-berita', [BeritaController::class, 'store']);
-    Route::get('/show-berita/{id}', [BeritaController::class, 'show']);
-    Route::get('/edit-berita/{id}', [BeritaController::class, 'edit']);
-    Route::put('/update-berita/{id}', [BeritaController::class, 'update']);
+    Route::post('/berita/store', [BeritaController::class, 'store']);
+    Route::get('/berita/{id}', [BeritaController::class, 'show']);
+    Route::get('/berita/edit/{id}', [BeritaController::class, 'edit']);
+    Route::put('berita/update/{id}', [BeritaController::class, 'update']);
     Route::put('/arsip-berita/{berita}', [BeritaController::class, 'arsip']);
     Route::put('/post-berita/{berita}', [BeritaController::class, 'post']);
-    Route::get('/delete-berita/{id}', [BeritaController::class, 'destroy']);
+    Route::get('/berita/delete/{id}', [BeritaController::class, 'destroy']);
 
 
     Route::get('slide', [SlideController::class, 'index']);
-    Route::post('store-slide', [SlideController::class, 'store']);
-    Route::get('/show-slide/{id}', [SlideController::class, 'show']);
-    Route::get('/edit-slide/{id}', [SlideController::class, 'edit']);
-    Route::put('/update-slide/{id}', [SlideController::class, 'update']);
-    Route::get('/delete-slide/{id}', [SlideController::class, 'destroy']);
+    Route::post('slide/store', [SlideController::class, 'store']);
+    Route::get('/slide/show/{id}', [SlideController::class, 'show']);
+    Route::get('/slide/edit/{id}', [SlideController::class, 'edit']);
+    Route::put('/slide/update/{id}', [SlideController::class, 'update']);
+    Route::get('/dslide/elete/{id}', [SlideController::class, 'destroy']);
 
 
     Route::get('akreditasi', [AkreditasiController::class, 'index']);
-    Route::post('store-akreditasi', [AkreditasiController::class, 'store']);
-    Route::get('/show-akreditasi/{id}', [AkreditasiController::class, 'show']);
-    Route::get('/edit-akreditasi/{id}', [AkreditasiController::class, 'edit']);
-    Route::put('/update-akreditasi/{id}', [AkreditasiController::class, 'update']);
-    Route::get('/delete-akreditasi/{id}', [AkreditasiController::class, 'destroy']);
+    Route::post('akreditasi/store', [AkreditasiController::class, 'store']);
+    Route::get('/akreditasi/show/{id}', [AkreditasiController::class, 'show']);
+    Route::get('/akreditasi/edit/{id}', [AkreditasiController::class, 'edit']);
+    Route::put('/akreditasi/update/{id}', [AkreditasiController::class, 'update']);
+    Route::get('/akreditasi/delete/{id}', [AkreditasiController::class, 'destroy']);
 
     Route::get('mahasiswa', [MasterMahasiswaController::class, 'index']);
     Route::get('create', [MasterMahasiswaController::class, 'create']);
-    Route::post('store-mahasiswa', [MasterMahasiswaController::class, 'store']);
-    Route::get('/show-mahasiswa/{id}', [MasterMahasiswaController::class, 'show']);
-    Route::get('/edit-mahasiswa/{id}', [MasterMahasiswaController::class, 'edit']);
-    Route::put('/update-mahasiswa/{id}', [MasterMahasiswaController::class, 'update']);
-    Route::get('/delete-mahasiswa/{id}', [MasterMahasiswaController::class, 'destroy']);
+    Route::post('mahasiswa/store', [MasterMahasiswaController::class, 'store']);
+    Route::get('/mahasiswa/show/{id}', [MasterMahasiswaController::class, 'show']);
+    Route::get('/mahasiswa/edit/{id}', [MasterMahasiswaController::class, 'edit']);
+    Route::put('/mahasiswa/update/{id}', [MasterMahasiswaController::class, 'update']);
+    Route::get('/mahasiswadelete/{id}', [MasterMahasiswaController::class, 'destroy']);
 
     Route::get('prodi', [ProdiController::class, 'index']);
     Route::post('store-prodi', [ProdiController::class, 'store']);
@@ -115,13 +115,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('tracer', [TracerStudiController::class, 'index']);
 
     Route::get('fasilitas', [FasilitasController::class, 'index']);
-    Route::post('store-fasilitas', [FasilitasController::class, 'store']);
-    Route::get('show-fasilitas/{fasilitas}', [FasilitasController::class, 'show']);
-    Route::get('/edit-fasilitas/{id}', [FasilitasController::class, 'edit']);
-    Route::put('/update-fasilitas/{id}', [FasilitasController::class, 'update']);
-    Route::get('/delete-fasilitas/{id}', [FasilitasController::class, 'destroy']);
+    Route::post('fasilitas/store', [FasilitasController::class, 'store']);
+    Route::get('fasilitas/show/{fasilitas}', [FasilitasController::class, 'show']);
+    Route::get('/fasilitas/edit/{id}', [FasilitasController::class, 'edit']);
+    Route::put('/fasilitas/update/{id}', [FasilitasController::class, 'update']);
+    Route::get('/fasilitas/delete/{id}', [FasilitasController::class, 'destroy']);
 
-    Route::post('store-jenis-fasilitas', [FasilitasController::class, 'storeJenis']);
+    Route::post('jenis-fasilitas/store', [FasilitasController::class, 'storeJenis']);
 
     Route::get('/delete-galery-fasilitas/{id}', [FasilitasGaleryController::class, 'destroy']);
     Route::get('/delete-video/{id}', [FasilitasGaleryController::class, 'destroyVideo']);
@@ -147,32 +147,32 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('store-jawaban', [JawabanController::class, 'store']);
     Route::put('/update-jawaban/{jawaban}', [JawabanController::class, 'update']);
 
-    Route::post('store-jenis-pedoman', [PedomanController::class, 'pedomanStore']);
-    Route::get('show-jenis-pedoman/{jenis_pedoman}', [PedomanController::class, 'pedomanShow']);
-    Route::get('edit-jenis-pedoman/{jenis_pedoman}', [PedomanController::class, 'pedomanEdit']);
-    Route::put('update-jenis-pedoman/{jenis_pedoman', [PedomanController::class, 'pedomanUpdate']);
+    Route::post('jenis-pedoman/store', [PedomanController::class, 'pedomanStore']);
+    Route::get('jenis-pedoman/show/{jenis_pedoman}', [PedomanController::class, 'pedomanShow']);
+    Route::get('jenis-pedoman/edit/{jenis_pedoman}', [PedomanController::class, 'pedomanEdit']);
+    Route::put('jenis-pedoman/update/{jenis_pedoman', [PedomanController::class, 'pedomanUpdate']);
 
     Route::get('pedoman', [PedomanController::class, 'index']);
-    Route::post('store-pedoman', [PedomanController::class, 'store']);
-    Route::get('/edit-pedoman/{id}', [PedomanController::class, 'edit']);
-    Route::put('/update-pedoman/{id}', [PedomanController::class, 'update']);
-    Route::get('/delete-pedoman/{id}', [PedomanController::class, 'destroy']);
+    Route::post('pedoman/store', [PedomanController::class, 'store']);
+    Route::get('/pedoman/edit/{id}', [PedomanController::class, 'edit']);
+    Route::put('/pedoman/update/{id}', [PedomanController::class, 'update']);
+    Route::get('/pedoman/delete/{id}', [PedomanController::class, 'destroy']);
 
 
     Route::get('pbl', [PblController::class, 'index']);
-    Route::post('store-pbl', [PblController::class, 'store']);
-    Route::put('/update-pbl/{pbl}', [PblController::class, 'update']);
-    Route::get('/delete-pbl/{pbl}', [PblController::class, 'destroy']);
+    Route::post('pbl/store', [PblController::class, 'store']);
+    Route::put('/pbl/update/{pbl}', [PblController::class, 'update']);
+    Route::get('/pbl/delete/{pbl}', [PblController::class, 'destroy']);
 
     Route::get('penelitian', [PenelitianController::class, 'index']);
-    Route::post('store-penelitian', [PenelitianController::class, 'store']);
-    Route::put('/update-penelitian/{penelitian}', [PenelitianController::class, 'update']);
-    Route::get('/delete-penelitian/{penelitian}', [PenelitianController::class, 'destroy']);
+    Route::post('penelitian/store', [PenelitianController::class, 'store']);
+    Route::put('/penelitian/update/{penelitian}', [PenelitianController::class, 'update']);
+    Route::get('/penelitian/delete/{penelitian}', [PenelitianController::class, 'destroy']);
 
     Route::get('pengabdian', [PengabdianController::class, 'index']);
-    Route::post('store-pengabdian', [PengabdianController::class, 'store']);
-    Route::put('/update-pengabdian/{pengabdian}', [PengabdianController::class, 'update']);
-    Route::get('/delete-pengabdian/{pengabdian}', [PengabdianController::class, 'destroy']);
+    Route::post('pengabdian/store', [PengabdianController::class, 'store']);
+    Route::put('/pengabdian/update/{pengabdian}', [PengabdianController::class, 'update']);
+    Route::get('/pengabdian/delete/{pengabdian}', [PengabdianController::class, 'destroy']);
 
     Route::get('survei', [SurveiController::class, 'index']);
     Route::post('store-survei', [SurveiController::class, 'store']);
@@ -182,11 +182,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete-survei/{survei}', [SurveiController::class, 'destroy']);
 
     Route::get('tugas-akhir', [TugasAkhirController::class, 'index']);
-    Route::post('store-tugas-akhir', [TugasAkhirController::class, 'store']);
-    Route::get('/show-tugas-akhir/{id}', [TugasAkhirController::class, 'show']);
-    Route::get('/edit-tugas-akhir/{tugas_akhir}', [TugasAkhirController::class, 'edit']);
-    Route::put('/update-tugas-akhir/{tugas_akhir}', [TugasAkhirController::class, 'update']);
-    Route::get('/delete-tugas-akhir/{tugas_akhir}', [TugasAkhirController::class, 'destroy']);
+    Route::post('tugas-akhir/store', [TugasAkhirController::class, 'store']);
+    Route::get('/tugas-akhir/show/{id}', [TugasAkhirController::class, 'show']);
+    Route::get('/tugas-akhir/edit/{tugas_akhir}', [TugasAkhirController::class, 'edit']);
+    Route::put('/tugas-akhir/update/{tugas_akhir}', [TugasAkhirController::class, 'update']);
+    Route::get('/tugas-akhir/delete/{tugas_akhir}', [TugasAkhirController::class, 'destroy']);
 
     Route::get('laporan-tracer/bekerja/cara-mendapatkan-pekerjaan', [BekerjaController::class, 'caraMendapatkanPekerjaan']);
     Route::get('laporan-tracer/bekerja/jenis-pekerjaan', [BekerjaController::class, 'jenisPekerjaan']);

@@ -29,14 +29,14 @@
                         <tr>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ url("admin/show-mahasiswa/$mahasiswa->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("admin/mahasiswa/show/$mahasiswa->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("admin/edit-mahasiswa/$mahasiswa->id") }}" class="btn btn-warning"><span
+                                    <a href="{{ url("admin/mahasiswa/edit/$mahasiswa->id") }}" class="btn btn-warning"><span
                                             class="fa fa-edit"></span> Edit</a>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("admin/delete-mahasiswa/$mahasiswa->id") }}" class="btn btn-danger"><span
+                                        href="{{ url("admin/mahasiswa/delete/$mahasiswa->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -69,7 +69,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('admin/store-mahasiswa') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/mahasiswa/store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
