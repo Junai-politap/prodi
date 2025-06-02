@@ -1,6 +1,4 @@
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
-
 
     <div class="card">
         <h5 class="card-header">Edit Slide</h5>

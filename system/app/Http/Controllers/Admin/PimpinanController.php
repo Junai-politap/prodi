@@ -22,7 +22,7 @@ class PimpinanController extends Controller
         $pimpinan->nama_lengkap = request('nama_lengkap');
         $pimpinan->gelar_belakang = request('gelar_belakang');
         $pimpinan->jabatan = request('jabatan');
-        $pimpinan->bidang_keahlian = request('bidang_keahlian');
+        $pimpinan->unit_kerja = request('unit_kerja');
         $pimpinan->tempat_lahir = request('tempat_lahir');
         $pimpinan->tanggal_lahir = request('tanggal_lahir');
         $pimpinan->jenis_kelamin = request('jenis_kelamin');
@@ -32,7 +32,7 @@ class PimpinanController extends Controller
         $pimpinan->email = request('email');
         $pimpinan->handleUploadFoto();
         $pimpinan->save();
-        return redirect('pimpinan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('admin/pimpinan')->with('success', 'Data Berhasil di Simpan');
 
     }
 
@@ -57,7 +57,7 @@ class PimpinanController extends Controller
         $pimpinan->nama_lengkap = request('nama_lengkap');
         $pimpinan->gelar_belakang = request('gelar_belakang');
         $pimpinan->jabatan = request('jabatan');
-        $pimpinan->bidang_keahlian = request('bidang_keahlian');
+        $pimpinan->unit_kerja = request('unit_kerja');
         $pimpinan->tempat_lahir = request('tempat_lahir');
         $pimpinan->tanggal_lahir = request('tanggal_lahir');
         $pimpinan->jenis_kelamin = request('jenis_kelamin');
@@ -67,7 +67,7 @@ class PimpinanController extends Controller
         $pimpinan->email = request('email');
         $pimpinan->handleUploadFoto();
         $pimpinan->save();
-        return redirect('pimpinan')->with('success', 'Data Berhasil di Simpan');
+        return redirect('admin/pimpinan')->with('success', 'Data Berhasil di Simpan');
     }
 
     public function destroy($id)

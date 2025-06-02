@@ -1,5 +1,5 @@
 <x-admin>
-    @section('title', ' SUPER ADMIN')
+    @section('title', ' TEKNOLOGI INFORMASI')
  
         <div class="container-fluid">
             <div class="row">

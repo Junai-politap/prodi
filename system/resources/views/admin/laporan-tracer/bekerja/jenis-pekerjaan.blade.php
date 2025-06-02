@@ -1,6 +1,6 @@
 @extends('template.admin')
 
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
+@section('title', ' TEKNOLOGI INFORMASI')
 
 @section('content')
     @include('section.notif')

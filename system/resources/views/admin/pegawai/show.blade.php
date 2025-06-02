@@ -1,6 +1,5 @@
 <x-admin>
-    @section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
-
+    
     <div class="card"><br>
         <div class="header">
             <a href="{{ url('admin/pegawai') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span>

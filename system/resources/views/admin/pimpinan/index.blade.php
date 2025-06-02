@@ -1,7 +1,5 @@
 <x-admin>
 
-    @section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
-
     @include('section.notif')
     <div class="card">
         <div class="card-header">
@@ -94,9 +92,28 @@
                             </div>
 
                             <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Unit Kerja</label>
+                                <div class="col-sm-9">
+                                    <select name="unit_kerja" class="form-control">
+                                        <option value=""> Pilih Unit Kerja</option>
+                                        <option value="Prodi DIII Teknologi Informasi"> Prodi DIII Teknologi Informasi</option>
+                                        <option value="Prodi DIII Teknologi Listrik"> Prodi DIII Teknologi Listrik</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Jabatan</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="jabatan">
+                                    <select name="jabatan" class="form-control">
+                                        <option value=""> Pilih Jabatan</option>
+                                        <option value="Ketua Jurusan"> Ketua Jurusan</option>
+                                        <option value="Sekretaris Jurusan">Sekretaris Jurusan</option>
+                                        <option value="Koordinator Prodi"> Koordinator Prodi</option>
+                                        <option value="Kepala Laboratotium"> Kepala Laboratotium</option>
+                                        <option value="Kepala Bengkel"> Kepala Bengkel</option>
+                                        
+                                    </select>
                                 </div>
                             </div>
 

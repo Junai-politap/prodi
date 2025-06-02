@@ -1,6 +1,4 @@
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
-
     @include('section.notif')
 
     <style>

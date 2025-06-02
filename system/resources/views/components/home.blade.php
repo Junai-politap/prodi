@@ -13,7 +13,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>@yield('title') Prodi Teknologi Informasi Politeknik Negeri Ketapang</title>
+    <title>@yield('title') Program Studi Teknologi Informasi Politeknik Negeri Ketapang</title>
 
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

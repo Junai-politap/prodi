@@ -1,5 +1,5 @@
 <x-admin>
-    @section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
+  
     @include('section.notif')
     <div class="card card-info">
         <div class="card-header">
@@ -45,11 +45,11 @@
                             <td>
                                 <div class="btn-group">
 
-                                    <a href="{{ url("pelayanan/edit/$pelayanan->id_pelayanan") }}" class="btn btn-warning"><span
-                                            class="fa fa-edit"></span> Edit</a>
+                                    <a href="{{ url("pelayanan/edit/$pelayanan->id_pelayanan") }}"
+                                        class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
-                                    <a href="{{ url("pelayanan/delete/$pelayanan->id_pelayanan") }}" class="btn btn-danger"><span
-                                            class="fa fa-trash"></span> Lihat</a>
+                                    <a href="{{ url("pelayanan/delete/$pelayanan->id_pelayanan") }}"
+                                        class="btn btn-danger"><span class="fa fa-trash"></span> Lihat</a>
                                 </div>
                             </td>
                             <td>{{ $pelayanan->jenis_pelayanan->nama_jenis_pelayanan }}</td>

@@ -1,5 +1,4 @@
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
 
     <div class="card">
         <div class="card-header">

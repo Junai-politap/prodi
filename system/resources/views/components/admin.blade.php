@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title> @yield('title') | Siakad Teknik Informatika</title>
+    <title> TEKNOLOGI INFORMASI </title>
     <link rel="icon" href="{{ url('public/admin') }}/logo.ico" type="image/x-icon">
 
     <!-- Font Awesome Icons -->

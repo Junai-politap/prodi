@@ -1,7 +1,5 @@
 <x-admin>
-@section('title', 'SIAKAD TEKNIK INFORMATIKA - Admin')
-
-    @include('section.notif')
+ @include('section.notif')
 
     <div class="card card-solid">
         <div class="card-body">
