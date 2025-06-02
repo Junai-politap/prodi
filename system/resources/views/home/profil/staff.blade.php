@@ -19,7 +19,7 @@
                                     <br>
                                     <div class="card">
                                         <img src="{{ url("public/$pegawai->foto") }}" class="card-img-top"
-                                            alt="Waterfall"
+                                             onerror="this.src='{{ url('public/app') }}/default-person.JPG';"
                                             style="object-fit: cover; position: static; width: 100%; height: 400px;">
                                         <div class="card-body">
                                             <h5 class="card-title">{{ $pegawai->nama_lengkap }},
@@ -39,7 +39,7 @@
                                     <br>
                                     <div class="card">
                                         <img src="{{ url("public/$pegawai->foto") }}" class="card-img-top"
-                                            alt="Waterfall"
+                                             onerror="this.src='{{ url('public/app') }}/default-person.JPG';"
                                             style="object-fit: cover; position: static; width: 100%; height: 400px;">
                                         <div class="card-body">
                                             <h5 class="card-title">{{ $pegawai->nama_lengkap }},

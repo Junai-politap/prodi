@@ -11,7 +11,7 @@
                     <div class="card-body text-center">
                         @if ($pimpinan->foto == $pimpinan->foto)
                             <img style="width: 100%" src="{{ url("public/$pimpinan->foto") }}"
-                                onerror="this.src='https://bootdey.com/img/Content/avatar/avatar7.png';" alt="avatar"
+                                onerror="this.src='{{ url('public/app') }}/default-person.JPG';" alt="avatar"
                                 class="rounded">
                         @endif
                         <h2 class="my-3">{{ $pimpinan->nama_lengkap }}, {{ $pimpinan->gelar_belakang }}</h2>

@@ -46,6 +46,21 @@
                         </div>
 
                         <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Unit Kerja</label>
+                            <div class="col-sm-9">
+                                <select name="unit_kerja" class="form-control">
+                                    <option value="Prodi DIII Teknologi Informasi" @if ($pimpinan->unit_kerja == 'Prodi DIII Teknologi Informasi') selected @endif>
+                                        Prodi DIII Teknologi Informasi</option>
+                                    <option value="Prodi DIII Teknologi Listrik"
+                                        @if ($pimpinan->unit_kerja == 'Prodi DIII Teknologi Listrik') selected @endif>Prodi DIII Teknologi Listrik
+                                    </option>
+                                    
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Jabatan</label>
                             <div class="col-sm-9">
                                 <select name="jabatan" class="form-control">
@@ -57,8 +72,8 @@
                                     <option value="Koordinator Prodi" @if ($pimpinan->jabatan == 'Koordinator Prodi') selected @endif>
                                         Koordinator Prodi
                                     </option>
-                                    <option value="Kepala Laboratotium"
-                                        @if ($pimpinan->jabatan == 'Kepala Laboratotium') selected @endif>Kepala Laboratotium</option>
+                                    <option value="Kepala Laboratorium"
+                                        @if ($pimpinan->jabatan == 'Kepala Laboratorium') selected @endif>Kepala Laboratorium</option>
                                     <option value="Kepala Bengkel" @if ($pimpinan->jabatan == 'Kepala Bengkel') selected @endif>
                                         Kepala Bengkel</option>
 

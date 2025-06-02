@@ -110,7 +110,7 @@
                                         <option value="Ketua Jurusan"> Ketua Jurusan</option>
                                         <option value="Sekretaris Jurusan">Sekretaris Jurusan</option>
                                         <option value="Koordinator Prodi"> Koordinator Prodi</option>
-                                        <option value="Kepala Laboratotium"> Kepala Laboratotium</option>
+                                        <option value="Kepala Laboratorium"> Kepala Laboratorium</option>
                                         <option value="Kepala Bengkel"> Kepala Bengkel</option>
                                         
                                     </select>

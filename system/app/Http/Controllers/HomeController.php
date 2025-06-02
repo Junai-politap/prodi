@@ -164,7 +164,9 @@ class HomeController extends Controller
     public function pimpinan()
     {
 
-        $data['list_pimpinan'] = Pimpinan::all();
+        $data['kajur'] = Pimpinan::where('jabatan', 'Ketua Jurusan')->get();
+        $data['list_pimpinan'] = Pimpinan::where('unit_kerja', 'Prodi DIII Teknologi Informasi')->get();
+      
 
         $data['list_jenis_pelayanan'] = Jenis_pelayanan::all();
         $data['list_jenis_pedoman'] = Jenis_pedoman::all();
