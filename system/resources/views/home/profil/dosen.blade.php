@@ -14,7 +14,7 @@
                 <div class="container">
                     <div class="row">
                         @foreach ($list_pegawai as $pegawai)
-                            @if ($pegawai->jabatan == 'Dosen')
+                            @if ($pegawai->jabatan == 'Tenaga Pengajar')
                                 <div class="col-md-4">
                                     <br>
                                     <div class="card">

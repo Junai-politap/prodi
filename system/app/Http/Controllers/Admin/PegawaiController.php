@@ -13,7 +13,7 @@ class PegawaiController extends Controller
         $data['list_pegawai'] = Pegawai::all();
         return view('admin.pegawai.index', $data);
     }
-
+ 
     public function store(Request $request)
     {
         $pegawai = New Pegawai;

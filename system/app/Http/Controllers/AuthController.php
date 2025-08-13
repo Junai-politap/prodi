@@ -34,9 +34,9 @@ class AuthController extends Controller
 
     function test(){
 		$user= new User;
-		$user->nama= 'Super Admin';
+		$user->nama= 'Super';
 		$user->username= 'teknologiinformasi';
-		$user->password=bcrypt('12QwAsZx23WeSdXc');
+		$user->password=bcrypt('admin');
 		$user->save();
 
 		return "Berhasil";
